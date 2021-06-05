@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Events</title>
+    <script src="https://unpkg.com/vuex@3.6.2/dist/vuex.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="../public/styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="notes-section">
+        <div class="columns">
+          <div class="column has-text-centered">
+            <strong>Notes</strong>
+            <div class="notes" v-for="note in notes">{{note}}</div>
+          </div>
+          <div class="column has-text-centered">
+            <strong>TimeStamp</strong>
+            <div class="notes" v-for="timestamp in timestamps">
+              {{timestamp}}
+            </div>
+          </div>
+        </div>
+        <input-component></input-component>
+      </div>
+      <note-count-component></note-count-component>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
